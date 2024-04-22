@@ -1,0 +1,80 @@
+# Default theme of Avouch Linux for GRUB2
+#
+# Copyright (C) 2017 Qurban Ullah
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# Global Property
+title-text: "Avouch Boot Menu"
+title-font: "DejaVu Sans Bold 24"
+title-color: "#FF9400"
+message-font: "DejaVu Sans Regular 14"
+message-color: "#000000"
+message-bg-color: "#FFFFFF"
+desktop-image: "background.png"
+desktop-color: "#2f2f2f"
+terminal-font: "DejaVu Mono 14"
+
+# Boot menu
++ boot_menu {
+	left = 10%
+	width = 80%
+	top = 20%
+	height = 50%
+	item_color = "#FFFFFF"
+	item_font = "DejaVu Sans Bold 14"
+	selected_item_color= "#FF9400"
+	selected_item_font = "DejaVu Sans Bold 14"	
+	item_height = 48
+	item_padding = 15
+	item_spacing = 5
+	icon_width = 48
+	icon_height = 48
+	item_icon_space = 10
+	selected_item_pixmap_style= "select_bg_*.png"
+	scrollbar = true
+	scrollbar_width = 24
+}
+
+# Progress Bar
++ progress_bar {
+	id = "__timeout__"
+	left = 15%
+	width = 70%
+	top = 80%
+	height = 30
+	show_text = false
+	font = "DejaVu Sans Bold 12"
+	text_color = "#000000"
+	bar_style = "bar_*.png"
+	highlight_style = "bar_hl_*.png"
+	text = "@TIMEOUT_NOTIFICATION_LONG@"
+}
+
+#help bar at the bottom
++ label {
+	top = 100%-25
+	left = 0
+	width = 100%
+	height = 20
+	text = "@KEYMAP_MIDDLE@"
+	align = "center"
+	font = "DejaVu Sans Regular 12"
+	color = "#FFFFFF"
+}
